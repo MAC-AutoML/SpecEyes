@@ -7,6 +7,7 @@
   <a href="#environment-setup">Environment Setup</a> ·
   <a href="#quick-start">Quick Start</a> ·
   <a href="#repository-structure">Repository Structure</a> ·
+  <a href="#acknowledgements">Acknowledgements</a> ·
   <a href="#license">License</a> ·
   <a href="#citation">Citation</a>
 </p>
@@ -160,8 +161,13 @@ Additional notes:
 - Temporary processed images are written to `eval_code_thyme/temp_processed_images/`
 - Result folders and cache directories are intentionally excluded through `.gitignore`
 
+<a id="acknowledgements"></a>
+## 6. Acknowledgements 🙏
+
+This repository benefits from code references from the [DeepEyes](https://github.com/Visual-Agent/DeepEyes) repository. We sincerely thank the authors and maintainers for their open-source contributions, which helped inform parts of our implementation and experimentation workflow.
+
 <a id="license"></a>
-## 6. License ⚖️
+## 7. License ⚖️
 
 This repository is released under `Apache-2.0`. See `LICENSE` for the full license text.
 
@@ -173,7 +179,7 @@ The repository also includes notes about third-party code and patches, including
 See `THIRD_PARTY_NOTICES.md` for the relevant attribution and redistribution notes. If you redistribute or modify those third-party-related components, you should also follow the corresponding upstream license requirements.
 
 <a id="citation"></a>
-## 7. Citation 📚
+## 8. Citation 📚
 
 If you use this repository, please cite the corresponding paper. A placeholder BibTeX entry is provided below and can be replaced with the final paper metadata later:
 
