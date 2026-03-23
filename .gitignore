@@ -12,7 +12,6 @@ judge_results*/
 conf_analysis*/
 eval_code_thyme/temp_processed_images/
 *.log
-*.png
 *.pdf
 *.jpg
 *.jpeg
