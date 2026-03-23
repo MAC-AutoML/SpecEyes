@@ -1,0 +1,18 @@
+# Install PyTorch with CUDA via conda before pip requirements:
+# conda install pytorch==2.5.1 torchvision==0.20.1 torchaudio==2.5.1 pytorch-cuda=12.1 -c pytorch -c nvidia
+
+accelerate==1.11.0
+autopep8
+datasets
+matplotlib
+numpy
+openai>=1.0.0
+opencv-python
+pandas
+pillow
+qwen-vl-utils==0.0.14
+requests
+scipy
+timeout-decorator
+tqdm
+transformers==4.57.1

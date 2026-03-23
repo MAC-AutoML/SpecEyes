@@ -1,0 +1,5 @@
+numpy
+openai>=1.0.0
+requests
+tqdm
+vllm==0.12.0
