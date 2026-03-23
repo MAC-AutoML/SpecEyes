@@ -46,28 +46,20 @@ This repository also relies on a patched image-loading behavior in `qwen-vl-util
 python scripts/patch_qwen_vl_utils.py
 ```
 
-The replacement implementation is provided in `scripts/fetch_image.py`.
-
-
-Default model configuration:
-
-| Role | Default Model |
-| --- | --- |
-| Deepeyes large model | `ChenShawn/DeepEyes-7B` |
-| Thyme large model | `Kwai-Keye/Thyme-RL` |
-| Small model | `Qwen/Qwen3-VL-2B-Instruct` |
-| Judge model | `Qwen/Qwen2.5-72B-Instruct` |
-
 <a id="quick-start"></a>
 ## 4. Quick Start 🚀
 
-### 4.1 Prepare Datasets
+### 4.1 Prepare Datasets and Models
 
-Download the datasets into the following directories, or pass explicit paths at runtime:
+Download the datasets and models into the following directories, or pass explicit paths at runtime:
 
 - [V*](https://huggingface.co/datasets/craigwu/vstar_bench/tree/main): `data/vstar`
 - [HR-Bench](https://huggingface.co/datasets/DreamMr/HR-Bench/tree/main): `data/HR-Bench`
 - [POPE](https://huggingface.co/datasets/lmms-lab/POPE/tree/main): `data/POPE`
+- [Deepeyes](https://huggingface.co/ChenShawn/DeepEyes-7B): `ChenShawn/DeepEyes-7B`
+- [Thyme](https://huggingface.co/Kwai-Keye/Thyme-RL): `Kwai-Keye/Thyme-RL`
+- [Qwen3-VL-2B](https://huggingface.co/Qwen/Qwen3-VL-2B-Instruct): `Qwen/Qwen3-VL-2B-Instruct`
+- [Qwen2.5-72B](https://huggingface.co/Qwen/Qwen2.5-72B-Instruct): `Qwen/Qwen2.5-72B-Instruct`
 
 ### 4.2 Run the Main Evaluation
 
