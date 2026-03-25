@@ -1,9 +1,8 @@
-<h2 align="center">SpecEyes: Accelerating Agentic Multimodal LLMs via Speculative Perception and Planning</h2>
+<h1 align="center">SpecEyes: Accelerating Agentic Multimodal LLMs via Speculative Perception and Planning</h2>
 
 
 <p align="center">
   <a href="#Highlights">Highlights</a> ·
-  <a href="#main-results">Main Results</a> ·
   <a href="#environment-setup">Environment Setup</a> ·
   <a href="#quick-start">Quick Start</a> ·
   <a href="#repository-structure">Repository Structure</a> ·
@@ -14,20 +13,36 @@
 
 SpecEyes is a speculative perception and planning framework for agentic multimodal LLMs. It uses a lightweight vision-language model to quickly assess a visual input and question, then applies answer separability gating to either accept the fast answer or defer to a more powerful large model with tool usage. This approach significantly reduces latency and computation in complex multimodal reasoning while maintaining strong accuracy. This repository includes evaluation code, judge scripts, confidence analysis, and result aggregation tools for SpecEyes.
 
+
 <a id="Highlights"></a>
-## 1. Highlights ✨
-![pipeline](figures/pipeline.png)
+## Highlights ✨
+
+<img src="figures/pipeline.png" alt="pipeline" style="width: 80%; display: block; margin: 0 auto;" />
+
 | Direction | Description |
 | --- | --- |
 | Stateful Bottleneck Analysis | Reveal the sequential tool-use dependency limiting latency and concurrency in agentic MLLMs. |
 | Agentic-Level Speculation | Propose speculative reasoning that skips full tool invocation loops for easy queries. |
 | Answer Separability Gating | Introduce a new confidence metric based on top-K logit gaps to decide safe bypass. |
 
-<a id="main-results"></a>
-## 2. Main Results 📊
-![result](figures/result.png)
+## Table of Contents
+- [Highlights ✨](#highlights-)
+- [Table of Contents](#table-of-contents)
+- [1. Environment Setup 🛠️](#1-environment-setup-️)
+- [2. Quick Start 🚀](#2-quick-start-)
+  - [2.1 Prepare Datasets and Models](#21-prepare-datasets-and-models)
+  - [2.2 Run the Main Evaluation](#22-run-the-main-evaluation)
+  - [2.3 Start the Judge Model](#23-start-the-judge-model)
+  - [2.4 Run the Judge Scripts](#24-run-the-judge-scripts)
+  - [3.5 Analyze Small-Model Confidence](#35-analyze-small-model-confidence)
+- [3. Repository Structure 🗂️](#3-repository-structure-️)
+- [4. Acknowledgements 🙏](#4-acknowledgements-)
+- [5. License ⚖️](#5-license-️)
+- [6. Citation 📚](#6-citation-)
+
+
 <a id="environment-setup"></a>
-## 3. Environment Setup 🛠️
+## 1. Environment Setup 🛠️
 
 We recommend `Python 3.11`. Install the PyTorch build matching your CUDA version first, then install the project requirements:
 
@@ -47,9 +62,9 @@ python scripts/patch_qwen_vl_utils.py
 ```
 
 <a id="quick-start"></a>
-## 4. Quick Start 🚀
+## 2. Quick Start 🚀
 
-### 4.1 Prepare Datasets and Models
+### 2.1 Prepare Datasets and Models
 
 Download the datasets and models into the following directories, or pass explicit paths at runtime:
 
@@ -61,7 +76,7 @@ Download the datasets and models into the following directories, or pass explici
 - [Qwen3-VL-2B](https://huggingface.co/Qwen/Qwen3-VL-2B-Instruct): `Qwen/Qwen3-VL-2B-Instruct`
 - [Qwen2.5-72B](https://huggingface.co/Qwen/Qwen2.5-72B-Instruct): `Qwen/Qwen2.5-72B-Instruct`
 
-### 4.2 Run the Main Evaluation
+### 2.2 Run the Main Evaluation
 
 ```bash
 # Deepeyes baseline
@@ -79,7 +94,7 @@ python eval_code_thyme/SpecEyes.py --score_threshold 0.98
 
 For the code-reasoning variant, replace `SpecEyes.py` with `SpecReason.py`.
 
-### 4.3 Start the Judge Model
+### 2.3 Start the Judge Model
 
 ```bash
 bash scripts/start_qwen2.5_72b_vllm.sh
@@ -87,7 +102,7 @@ bash scripts/start_qwen2.5_72b_vllm.sh
 
 The default judge endpoint is `http://localhost:23333/v1`. Override it with `--api_url` if needed.
 
-### 4.4 Run the Judge Scripts
+### 2.4 Run the Judge Scripts
 
 ```bash
 bash scripts/run_judges.sh
@@ -101,7 +116,7 @@ python judge_code/judge_hr.py --input_folder eval_results_qwen3vl-2b-Instruct
 python judge_code/judge_pope.py --input_folder eval_results_qwen3vl-2b-Instruct
 ```
 
-### 4.5 Analyze Small-Model Confidence
+### 3.5 Analyze Small-Model Confidence
 
 ```bash
 # Run batched small-model inference
@@ -117,7 +132,7 @@ python scripts/analyze_small_conf_percentage.py --input_folder judge_results_qwe
 ```
 
 <a id="repository-structure"></a>
-## 5. Repository Structure 🗂️
+## 3. Repository Structure 🗂️
 
 ```text
 SpecEyes/
@@ -154,12 +169,12 @@ Additional notes:
 - Result folders and cache directories are intentionally excluded through `.gitignore`
 
 <a id="acknowledgements"></a>
-## 6. Acknowledgements 🙏
+## 4. Acknowledgements 🙏
 
 This repository benefits from code references from the [DeepEyes](https://github.com/Visual-Agent/DeepEyes) repository. We sincerely thank the authors and maintainers for their open-source contributions, which helped inform parts of our implementation and experimentation workflow.
 
 <a id="license"></a>
-## 7. License ⚖️
+## 5. License ⚖️
 
 This repository is released under `Apache-2.0`. See `LICENSE` for the full license text.
 
@@ -171,15 +186,15 @@ The repository also includes notes about third-party code and patches, including
 See `THIRD_PARTY_NOTICES.md` for the relevant attribution and redistribution notes. If you redistribute or modify those third-party-related components, you should also follow the corresponding upstream license requirements.
 
 <a id="citation"></a>
-## 8. Citation 📚
+## 6. Citation 📚
 
 If you use this repository, please cite the corresponding paper. A placeholder BibTeX entry is provided below and can be replaced with the final paper metadata later:
 
 ```bibtex
-@article{speceyes_placeholder,
-  title   = {SpecEyes},
-  author  = {Author One and Author Two and Author Three},
-  journal = {Placeholder Venue},
-  year    = {2026}
+@article{huang2026,
+  title={SpecEyes: Accelerating Agentic Multimodal LLMs via Speculative Perception and Planning},
+  author={Huang, Haoyu and Huang, Jinfa and Wan, Zhongwei and Zheng, Xiawu and Ji, Rongrong and Luo, Jiebo},
+  journal={arXiv preprint arXiv:2603.23483},
+  year={2026}
 }
 ```
