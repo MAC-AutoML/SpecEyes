@@ -23,7 +23,7 @@
   <a href="#citation">Citation</a>
 </p>
 
-SpecEyes is a speculative perception and planning framework for agentic multimodal LLMs. It uses a lightweight vision-language model to quickly assess a visual input and question, then applies answer separability gating to either accept the fast answer or defer to a more powerful large model with tool usage. This approach significantly reduces latency and computation in complex multimodal reasoning while maintaining strong accuracy. This repository includes evaluation code, judge scripts, confidence analysis, and result aggregation tools for SpecEyes.
+SpecEyes is a speculative perception and planning framework for agentic multimodal LLMs. It uses a lightweight vision-language model to quickly screen visual inputs and questions, then applies answer separability gating to either return the fast answer or defer to a stronger tool-using model. This repository provides evaluation code, judge scripts, confidence analysis, and result aggregation tools for SpecEyes.
 
 
 <a id="Highlights"></a>
