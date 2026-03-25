@@ -17,7 +17,9 @@ SpecEyes is a speculative perception and planning framework for agentic multimod
 <a id="Highlights"></a>
 ## Highlights ✨
 
-<img src="figures/pipeline.png" alt="pipeline" style="width: 70%; display: block; margin: 0 auto;" />
+<p align="center">
+<img src="figures/pipeline.png" width="75%">
+</p>
 
 | Direction | Description |
 | --- | --- |
@@ -26,6 +28,8 @@ SpecEyes is a speculative perception and planning framework for agentic multimod
 | Answer Separability Gating | Introduce a new confidence metric based on top-K logit gaps to decide safe bypass. |
 
 ## Table of Contents
+- [Highlights ✨](#highlights-)
+- [Table of Contents](#table-of-contents)
 - [1. Environment Setup 🛠️](#1-environment-setup-️)
 - [2. Quick Start 🚀](#2-quick-start-)
   - [2.1 Prepare Datasets and Models](#21-prepare-datasets-and-models)
