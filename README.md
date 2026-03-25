@@ -1,4 +1,16 @@
-<h1 align="center">SpecEyes: Accelerating Agentic Multimodal LLMs via Speculative Perception and Planning</h2>
+<h1 align="center">SpecEyes: Accelerating Agentic Multimodal LLMs via Speculative Perception and Planning</h1>
+
+<p align="center">
+  <a href="https://arxiv.org/abs/2603.23483">
+    <img src="https://img.shields.io/badge/arXiv-2603.23483-b31b1b?logo=arxiv&logoColor=white" alt="arXiv">
+  </a>
+  <a href="https://huggingface.co/papers/2603.23483">
+    <img src="https://img.shields.io/badge/🤗-Paper%20In%20HF-red.svg" alt="Hugging Face">
+  </a>
+  <a href="./LICENSE">
+    <img src="https://img.shields.io/badge/License-Apache_2.0-blue.svg" alt="License: Apache-2.0">
+  </a>
+</p>
 
 
 <p align="center">
@@ -190,7 +202,7 @@ See `THIRD_PARTY_NOTICES.md` for the relevant attribution and redistribution not
 <a id="citation"></a>
 ## 6. Citation 📚
 
-If you use this repository, please cite the corresponding paper. A placeholder BibTeX entry is provided below and can be replaced with the final paper metadata later:
+If you use this repository, please cite the corresponding paper:
 
 ```bibtex
 @article{huang2026,
