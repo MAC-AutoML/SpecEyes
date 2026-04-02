@@ -4,6 +4,9 @@
   <a href="https://arxiv.org/abs/2603.23483">
     <img src="https://img.shields.io/badge/arXiv-2603.23483-b31b1b?logo=arxiv&logoColor=white" alt="arXiv">
   </a>
+  <a href="https://www.youtube.com/watch?v=YRuGjU8-mjE">
+    <img src="https://img.shields.io/badge/-YouTube-000000?logo=youtube&logoColor=FF0000" alt="Youtube">
+  </a>
   <a href="https://huggingface.co/papers/2603.23483">
     <img src="https://img.shields.io/badge/🤗-Paper%20In%20HF-red.svg" alt="Hugging Face">
   </a>
